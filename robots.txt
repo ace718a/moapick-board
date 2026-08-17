@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://board.moapick.co.kr/sitemap.xml
