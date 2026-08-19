@@ -118,9 +118,9 @@ def write_category_page(cat, chunk, page_num, total_pages, total_count):
     for offset, item in enumerate(chunk):
         number = total_count - (start_pos + offset)
         rows.append(
-            f'      <a class="board-row" href="{html.escape(item["url"])}">\\n'
-            f'        <span class="board-number">{number}</span>\\n'
-            f'        <span class="board-title"><strong>{html.escape(item["title"])}</strong><small>{html.escape(item["description"])}</small></span>\\n'
+            f'      <a class="board-row" href="{html.escape(item["url"])}">\n'
+            f'        <span class="board-number">{number}</span>\n'
+            f'        <span class="board-title"><strong>{html.escape(item["title"])}</strong><small>{html.escape(item["description"])}</small></span>\n'
             f'      </a>'
         )
     pager = pagination_html(page_num, total_pages, base_url)
@@ -189,9 +189,9 @@ def write_main_page(chunk, page_num, total_pages, total_count):
     rows = []
     for item in chunk:
         rows.append(
-            f'      <a class="home-post-row" href="{html.escape(item["url"])}">\\n'
-            f'        <span class="post-category">{html.escape(CATEGORIES[item["category"]]["label"])}</span>\\n'
-            f'        <span class="board-title"><strong>{html.escape(item["title"])}</strong><small>{html.escape(item["description"])}</small></span>\\n'
+            f'      <a class="home-post-row" href="{html.escape(item["url"])}">\n'
+            f'        <span class="post-category">{html.escape(CATEGORIES[item["category"]]["label"])}</span>\n'
+            f'        <span class="board-title"><strong>{html.escape(item["title"])}</strong><small>{html.escape(item["description"])}</small></span>\n'
             f'      </a>'
         )
     pager = pagination_html(page_num, total_pages, "/")
