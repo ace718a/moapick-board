@@ -65,10 +65,32 @@ def article_data(path, category):
     }
 
 def existing_order(index_path):
-    if not index_path.exists():
-        return []
-    text = index_path.read_text(encoding="utf-8", errors="ignore")
-    return re.findall(r'href=["\\\'](/(?:moving|rent|internet|water)/[^"\\\']+/)["\\\']', text)
+    """Read existing order from page 1 and every generated pagination page."""
+    paths = []
+    if index_path.exists():
+        paths.append(index_path)
+
+    page_root = index_path.parent / "page"
+    if page_root.exists():
+        def page_number(path):
+            try:
+                return int(path.parent.name)
+            except ValueError:
+                return 10**9
+        paths.extend(sorted(page_root.glob("*/index.html"), key=page_number))
+
+    order = []
+    seen = set()
+    pattern = re.compile(r'href=["\'](/(?:moving|rent|internet|water)/[^"\']+/)["\']')
+
+    for path in paths:
+        page_text = path.read_text(encoding="utf-8", errors="ignore")
+        for url in pattern.findall(page_text):
+            if url not in seen:
+                seen.add(url)
+                order.append(url)
+
+    return order
 
 def collect_articles():
     out = []
