@@ -4,7 +4,7 @@ import re, sys
 ROOT = Path(__file__).resolve().parents[1]
 RULES = {
     "moving": {
-        "iframe": {"https://replyalba.com/pt/AM19mNDaWx"},
+        "iframe": {"https://replyalba.com/intros/_frm/index.php?code=WrHxEC3ope"},
         "href_contains": "/24/",
         "special": {"moving-estimate-checklist": "https://modu24.kr/frm.php?p_id=zobonpal15"},
     },

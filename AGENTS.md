@@ -250,7 +250,7 @@ CTA는 페이지 주제에 맞는 경로를 사용한다.
 
 현재 허용 iframe:
 
-- 포장이사 지역페이지 → `https://replyalba.com/pt/AM19mNDaWx` (사용자 확인 기준 URL, 임의 코드 변환 금지)
+- 포장이사 지역페이지 → `https://replyalba.com/intros/_frm/index.php?code=WrHxEC3ope` (사용자 직접 제공 상담창 iframe 기준)
 - 포장이사 정보페이지 `moving-estimate-checklist` → `https://modu24.kr/frm.php?p_id=zobonpal15`
 - 장기렌트 → `https://replyalba.com/intros/_frm/index.php?code=HkNocHicEW`
 - 정수기렌탈 → `https://replyalba.com/intros/_frm/index.php?code=DnrdQaVJyl`
@@ -265,6 +265,13 @@ CTA는 페이지 주제에 맞는 경로를 사용한다.
 - `Jy5O9XE2M3`는 포장이사 지역페이지용으로 사용하지 않는다.
 - `/pt/...` 주소를 임의로 `/intros/_frm/index.php?code=...` 형태로 추정·변환하지 않는다.
 - 포장이사 정보페이지 `moving-estimate-checklist`의 기존 `modu24.kr` 상담폼은 별도 페이지이므로 이 규칙의 교체 대상이 아니다.
+
+### 포장이사 지역페이지 상담창 iframe 고정 규칙
+- 포장이사 지역페이지의 정확한 상담창 iframe `src`는 `https://replyalba.com/intros/_frm/index.php?code=WrHxEC3ope` 이다.
+- 함께 사용하는 스크립트는 `https://replyalba.com/js/jquery-1.11.0.min.js` 와 `https://replyalba.com/js/iframeResizer.min.js` 이다.
+- iframe `name`은 `ifrm_icode`, `id`는 `ifrCCAl`을 유지하고 `#ifrCCAl`에 `iFrameResize`를 적용한다.
+- 이전에 사용한 `Jy5O9XE2M3` 및 `https://replyalba.com/pt/AM19mNDaWx`는 포장이사 지역페이지 상담창에 사용하지 않는다.
+- 포장이사 정보페이지 `moving-estimate-checklist`의 `modu24.kr` 상담폼은 별도 기준이며 교체하지 않는다.
 
 ### 금지
 
@@ -433,18 +440,13 @@ CTA는 페이지 주제에 맞는 경로를 사용한다.
 |---|---:|---|---|
 | 포장이사 | 1위 | 1위 서울 은평구 진관동 — 완료 (`/moving/seoul-eunpyeong-jingwan-moving/`) | 인구순위 다음 동 |
 | 인터넷가입 | 2위 | 2위 서울 강서구 화곡1동 — 완료 (`/internet/gangseo-hwagok1-internet-signup-benefits/`) | 인구순위 다음 미발행 동 |
-| 정수기렌탈 | 3위 | 3위 서울 양천구 신정3동 — 완료 (`/water/seoul-yangcheon-sinjeong3-water-purifier-rental/`) | 인구순위 다음 미발행 동 |
+| 정수기렌탈 | 3위 | 진행표 적용 전 기존 지역글만 존재 | 인구순위 3위 동부터 |
 
 
 ### 인터넷가입 순차 발행 로그
 | 순번 | 지역 | 상태 | URL |
 |---:|---|---|---|
 | 2 | 서울 강서구 화곡1동 | 완료 | `/internet/gangseo-hwagok1-internet-signup-benefits/` |
-
-### 정수기렌탈 순차 발행 로그
-| 순번 | 지역 | 상태 | URL |
-|---:|---|---|---|
-| 3 | 서울 양천구 신정3동 | 완료 | `/water/seoul-yangcheon-sinjeong3-water-purifier-rental/` |
 
 ### 포장이사 순차 발행 로그
 | 순번 | 지역 | 기준 인구 | 상태 | URL |
