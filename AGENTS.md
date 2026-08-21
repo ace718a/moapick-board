@@ -245,8 +245,26 @@ CTA는 페이지 주제에 맞는 경로를 사용한다.
 -   정수기렌탈 → `/water/`
 -   인터넷가입 → `/internet`
 
-외부 상담 iframe/제휴 링크는 기존 사이트에서 사용 중인 정상 코드를
-기준으로 유지한다.
+외부 상담 iframe/제휴 링크는 **카테고리별 허용 코드를 고정값으로 검사**한다.
+'기존 페이지에서 복사했으니 정상'이라고 추정하지 않는다.
+
+현재 허용 iframe:
+
+- 포장이사 지역페이지 → `https://replyalba.com/pt/AM19mNDaWx` (사용자 확인 기준 URL, 임의 코드 변환 금지)
+- 포장이사 정보페이지 `moving-estimate-checklist` → `https://modu24.kr/frm.php?p_id=zobonpal15`
+- 장기렌트 → `https://replyalba.com/intros/_frm/index.php?code=HkNocHicEW`
+- 정수기렌탈 → `https://replyalba.com/intros/_frm/index.php?code=DnrdQaVJyl`
+- 인터넷가입 → `https://kinternet.kr/frm.php?p_id=zobonpal15`
+
+신규/수정 페이지는 배포 전에 iframe `src`를 추출해 위 허용값과 정확히 대조한다.
+다른 업종의 iframe 코드가 하나라도 들어가면 QA FAIL로 처리한다.
+
+
+### 포장이사 지역페이지 제휴 URL 고정 규칙
+- 포장이사 지역페이지의 제휴/상담 URL은 `https://replyalba.com/pt/AM19mNDaWx`를 사용한다.
+- `Jy5O9XE2M3`는 포장이사 지역페이지용으로 사용하지 않는다.
+- `/pt/...` 주소를 임의로 `/intros/_frm/index.php?code=...` 형태로 추정·변환하지 않는다.
+- 포장이사 정보페이지 `moving-estimate-checklist`의 기존 `modu24.kr` 상담폼은 별도 페이지이므로 이 규칙의 교체 대상이 아니다.
 
 ### 금지
 
