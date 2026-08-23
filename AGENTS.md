@@ -517,3 +517,4 @@ CTA는 페이지 주제에 맞는 경로를 사용한다.
 | 싼타페 장기렌트 가격 | 차종형 | 기존 발행 | `/rent/hyundai-santa-fe-long-term-rental/` |
 | 장기렌트 가격비교·계약 체크 | 정보/비교형 | 기존 발행 | `/rent/long-term-rental-contract-checklist/` |
 | 스포티지 장기렌트 가격 | 차종형 | 완료 | `/rent/kia-sportage-long-term-rental/` |
+| 장기렌트 보증금 vs 선수금 | 정보/비교형 | 완료 | `/rent/long-term-rental-deposit-vs-advance-payment/` |
