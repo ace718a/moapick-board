@@ -449,13 +449,13 @@ CTA는 페이지 주제에 맞는 경로를 사용한다.
 |---:|---|---|---|
 | 2 | 서울 강서구 화곡1동 | 완료 | `/internet/gangseo-hwagok1-internet-signup-benefits/` |
 | 다음 | 서울 마포구 성산동 | 완료 | `/internet/seoul-mapo-seongsan-internet-signup-benefits/` |
+| 다음 | 서울 송파구 위례동 | 44,859명 (2026-06) | 완료 | `/internet/seoul-songpa-wirye-internet-signup-benefits/` |
 
 ### 포장이사 순차 발행 로그
 | 순번 | 지역 | 기준 인구 | 상태 | URL |
 |---:|---|---:|---|---|
 | 1 | 서울 은평구 진관동 | 53,565명 (2026-06) | 완료 | `/moving/seoul-eunpyeong-jingwan-moving/` |
 | 4 | 서울 강동구 길동 | 47,898명 (2026-06, 강동구 자료) | 완료 | `/moving/seoul-gangdong-gildong-moving/` |
-| 다음 | 서울 동작구 상도1동 | 완료 | `/moving/seoul-dongjak-sangdo1-moving/` |
 
 > 순위 자체는 최신 주민등록 인구 자료로 계속 검증한다. 이미 완료한 페이지는 인구 변동으로 순위가 조금 바뀌더라도 발행 완료 기록을 유지하고, 다음 미발행 상위 동부터 이어간다.
 
