@@ -443,12 +443,12 @@ CTA는 페이지 주제에 맞는 경로를 사용한다.
 |---:|---|---|---|
 | 3 | 서울 양천구 신정3동 | 완료 | `/water/seoul-yangcheon-sinjeong3-water-purifier-rental/` |
 | 다음 | 서울 노원구 상계1동 | 완료 | `/water/seoul-nowon-sanggye1-water-purifier-rental/` |
-| 다음 | 서울 강서구 화곡1동 | 완료 | `/water/seoul-gangseo-hwagok1-water-purifier-rental/` |
+| 다음 | 서울 강서구 화곡동 | 완료 | `/water/seoul-gangseo-hwagok-water-purifier-rental/` |
 
 ### 인터넷가입 순차 발행 로그
 | 순번 | 지역 | 상태 | URL |
 |---:|---|---|---|
-| 2 | 서울 강서구 화곡1동 | 완료 | `/internet/gangseo-hwagok1-internet-signup-benefits/` |
+| 2 | 서울 강서구 화곡동 | 완료 | `/internet/gangseo-hwagok1-internet-signup-benefits/` |
 | 다음 | 서울 마포구 성산동 | 완료 | `/internet/seoul-mapo-seongsan-internet-signup-benefits/` |
 | 다음 | 서울 송파구 위례동 | 44,859명 (2026-06) | 완료 | `/internet/seoul-songpa-wirye-internet-signup-benefits/` |
 
