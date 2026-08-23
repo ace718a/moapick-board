@@ -518,3 +518,16 @@ CTA는 페이지 주제에 맞는 경로를 사용한다.
 | 장기렌트 가격비교·계약 체크 | 정보/비교형 | 기존 발행 | `/rent/long-term-rental-contract-checklist/` |
 | 스포티지 장기렌트 가격 | 차종형 | 완료 | `/rent/kia-sportage-long-term-rental/` |
 | 장기렌트 보증금 vs 선수금 | 정보/비교형 | 완료 | `/rent/long-term-rental-deposit-vs-advance-payment/` |
+
+
+## 페이지 이미지 경로와 실제 파일 일치 검수
+
+신규/수정 페이지는 이미지 URL 문자열이 존재한다는 이유만으로 QA PASS 처리하지 않는다.
+
+- 페이지의 `img src`, `og:image`, 구조화데이터 `image` 등 모든 로컬 이미지 참조를 확인한다.
+- `/assets/images/...` 또는 `https://board.moapick.co.kr/assets/images/...`를 가리키는 경우 현재 Git에 **동일한 파일명과 동일한 확장자**의 실파일이 존재해야 한다.
+- `.png`, `.webp`, `.jpg`는 서로 다른 파일이다. HTML이 `.webp`를 요청하고 실제 파일이 `.png`라면 QA FAIL이다.
+- 템플릿 복사 후 기존 이미지 파일명이나 확장자가 일부 위치에 남지 않았는지 전수 확인한다.
+- `og:image`만 정상이고 본문 `img src`가 깨져 있어도 QA FAIL이다.
+- 배포 ZIP에는 신규 페이지가 실제 참조하는 신규 이미지 파일을 반드시 함께 포함한다.
+- 완료 전에 모든 로컬 이미지 참조와 파일시스템을 대조하여 누락 0건을 확인한다.
