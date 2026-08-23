@@ -435,13 +435,14 @@ CTA는 페이지 주제에 맞는 경로를 사용한다.
 |---|---:|---|---|
 | 포장이사 | 1위 | 1위 진관동, 다음 순차분 서울 강동구 길동 — 완료 (`/moving/seoul-gangdong-gildong-moving/`) | 인구순위 다음 미발행 동 |
 | 인터넷가입 | 2위 | 화곡1동 완료, 서울 마포구 성산동 완료 (`/internet/seoul-mapo-seongsan-internet-signup-benefits/`) | 인구순위 다음 미발행 동 |
-| 정수기렌탈 | 3위 | 3위 서울 양천구 신정3동 — 완료 (`/water/seoul-yangcheon-sinjeong3-water-purifier-rental/`) | 인구순위 다음 미발행 동 |
+| 정수기렌탈 | 3위 | 신정3동 완료, 서울 노원구 상계1동 완료 (`/water/seoul-nowon-sanggye1-water-purifier-rental/`) | 인구순위 다음 미발행 동 |
 
 
 ### 정수기렌탈 순차 발행 로그
 | 순번 | 지역 | 상태 | URL |
 |---:|---|---|---|
 | 3 | 서울 양천구 신정3동 | 완료 | `/water/seoul-yangcheon-sinjeong3-water-purifier-rental/` |
+| 다음 | 서울 노원구 상계1동 | 완료 | `/water/seoul-nowon-sanggye1-water-purifier-rental/` |
 
 ### 인터넷가입 순차 발행 로그
 | 순번 | 지역 | 상태 | URL |
