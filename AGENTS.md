@@ -260,17 +260,12 @@ CTA는 페이지 주제에 맞는 경로를 사용한다.
 다른 업종의 iframe 코드가 하나라도 들어가면 QA FAIL로 처리한다.
 
 
-### 포장이사 지역페이지 제휴 URL 고정 규칙
-- 포장이사 지역페이지의 제휴/상담 URL은 `https://replyalba.com/pt/AM19mNDaWx`를 사용한다.
-- `Jy5O9XE2M3`는 포장이사 지역페이지용으로 사용하지 않는다.
-- `/pt/...` 주소를 임의로 `/intros/_frm/index.php?code=...` 형태로 추정·변환하지 않는다.
-- 포장이사 정보페이지 `moving-estimate-checklist`의 기존 `modu24.kr` 상담폼은 별도 페이지이므로 이 규칙의 교체 대상이 아니다.
 
 ### 포장이사 지역페이지 상담창 iframe 고정 규칙
 - 포장이사 지역페이지의 정확한 상담창 iframe `src`는 `https://replyalba.com/intros/_frm/index.php?code=WrHxEC3ope` 이다.
 - 함께 사용하는 스크립트는 `https://replyalba.com/js/jquery-1.11.0.min.js` 와 `https://replyalba.com/js/iframeResizer.min.js` 이다.
 - iframe `name`은 `ifrm_icode`, `id`는 `ifrCCAl`을 유지하고 `#ifrCCAl`에 `iFrameResize`를 적용한다.
-- 이전에 사용한 `Jy5O9XE2M3` 및 `https://replyalba.com/pt/AM19mNDaWx`는 포장이사 지역페이지 상담창에 사용하지 않는다.
+- 이전에 잘못 사용한 포장이사 상담 코드는 재사용하지 않는다. 현재 고정값은 위 `WrHxEC3ope`만 허용한다.
 - 포장이사 정보페이지 `moving-estimate-checklist`의 `modu24.kr` 상담폼은 별도 기준이며 교체하지 않는다.
 
 ### 금지
@@ -438,10 +433,15 @@ CTA는 페이지 주제에 맞는 경로를 사용한다.
 
 | 업종 | 시작 순위 | 현재 완료 | 다음 작업 |
 |---|---:|---|---|
-| 포장이사 | 1위 | 1위 서울 은평구 진관동 — 완료 (`/moving/seoul-eunpyeong-jingwan-moving/`) | 인구순위 다음 동 |
+| 포장이사 | 1위 | 1위 진관동, 다음 순차분 서울 강동구 길동 — 완료 (`/moving/seoul-gangdong-gildong-moving/`) | 인구순위 다음 미발행 동 |
 | 인터넷가입 | 2위 | 2위 서울 강서구 화곡1동 — 완료 (`/internet/gangseo-hwagok1-internet-signup-benefits/`) | 인구순위 다음 미발행 동 |
-| 정수기렌탈 | 3위 | 진행표 적용 전 기존 지역글만 존재 | 인구순위 3위 동부터 |
+| 정수기렌탈 | 3위 | 3위 서울 양천구 신정3동 — 완료 (`/water/seoul-yangcheon-sinjeong3-water-purifier-rental/`) | 인구순위 다음 미발행 동 |
 
+
+### 정수기렌탈 순차 발행 로그
+| 순번 | 지역 | 상태 | URL |
+|---:|---|---|---|
+| 3 | 서울 양천구 신정3동 | 완료 | `/water/seoul-yangcheon-sinjeong3-water-purifier-rental/` |
 
 ### 인터넷가입 순차 발행 로그
 | 순번 | 지역 | 상태 | URL |
@@ -452,6 +452,7 @@ CTA는 페이지 주제에 맞는 경로를 사용한다.
 | 순번 | 지역 | 기준 인구 | 상태 | URL |
 |---:|---|---:|---|---|
 | 1 | 서울 은평구 진관동 | 53,565명 (2026-06) | 완료 | `/moving/seoul-eunpyeong-jingwan-moving/` |
+| 4 | 서울 강동구 길동 | 47,898명 (2026-06, 강동구 자료) | 완료 | `/moving/seoul-gangdong-gildong-moving/` |
 
 > 순위 자체는 최신 주민등록 인구 자료로 계속 검증한다. 이미 완료한 페이지는 인구 변동으로 순위가 조금 바뀌더라도 발행 완료 기록을 유지하고, 다음 미발행 상위 동부터 이어간다.
 
