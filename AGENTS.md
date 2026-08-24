@@ -550,3 +550,4 @@ CTA는 페이지 주제에 맞는 경로를 사용한다.
 - 인구순 진행표도 숫자 행정동을 개별 슬롯으로 반복 소비하지 않고 대표 지역 1개로 관리한다.
 | 다음 | 서울 관악구 신림동 | 완료 | `/moving/seoul-gwanak-sillim-moving/` |
 | 다음 | 서울 송파구 잠실동 | 완료 | `/internet/seoul-songpa-jamsil-internet-signup-benefits/` |
+| 다음 | 서울 송파구 잠실동 | 완료 | `/water/seoul-songpa-jamsil-water-purifier-rental/` |
