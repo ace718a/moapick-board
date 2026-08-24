@@ -520,6 +520,7 @@ CTA는 페이지 주제에 맞는 경로를 사용한다.
 | 장기렌트 가격비교·계약 체크 | 정보/비교형 | 기존 발행 | `/rent/long-term-rental-contract-checklist/` |
 | 스포티지 장기렌트 가격 | 차종형 | 완료 | `/rent/kia-sportage-long-term-rental/` |
 | 장기렌트 보증금 vs 선수금 | 정보/비교형 | 완료 | `/rent/long-term-rental-deposit-vs-advance-payment/` |
+| 그랜저 장기렌트 가격 | 차종형 | 완료 | `/rent/hyundai-grandeur-long-term-rental/` |
 
 
 ## 페이지 이미지 경로와 실제 파일 일치 검수
