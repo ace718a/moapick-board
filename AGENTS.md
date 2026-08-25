@@ -555,3 +555,4 @@ CTA는 페이지 주제에 맞는 경로를 사용한다.
 | 다음 | 서울 송파구 잠실동 | 완료 | `/water/seoul-songpa-jamsil-water-purifier-rental/` |
 | 다음 | 서울 마포구 성산동 | 46,870명 (2026-06) | 완료 | `/moving/seoul-mapo-seongsan-moving/` |
 | 다음 | 서울 동대문구 장안동 | 70,005명 (2026-06) | 완료 | `/internet/seoul-dongdaemun-jangan-internet-signup-benefits/` |
+| 다음 | 서울 동대문구 장안동 | 70,005명 (2026-06) | 완료 | `/water/seoul-dongdaemun-jangan-water-purifier-rental/` |
