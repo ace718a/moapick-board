@@ -443,7 +443,7 @@ CTA는 페이지 주제에 맞는 경로를 사용한다.
 |---:|---|---|---|
 | 3 | 서울 양천구 신정3동 | 완료 | `/water/seoul-yangcheon-sinjeong3-water-purifier-rental/` |
 | 다음 | 서울 노원구 상계1동 | 완료 | `/water/seoul-nowon-sanggye1-water-purifier-rental/` |
-| 다음 | 서울 강서구 화곡동 | 완료 | `/water/seoul-gangseo-hwagok-water-purifier-rental/` |
+| 다음 | 서울 강서구 화곡동 | 기존 화곡1동 페이지를 대표 페이지로 유지 | `/water/seoul-gangseo-hwagok1-water-purifier-rental/` |
 
 ### 인터넷가입 순차 발행 로그
 | 순번 | 지역 | 상태 | URL |
@@ -544,10 +544,12 @@ CTA는 페이지 주제에 맞는 경로를 사용한다.
 
 - 예: `역삼1동`, `역삼2동` → **역삼동** 1개 페이지로 통합한다.
 - 예: `화곡1동`, `화곡2동` 등 → **화곡동** 1개 페이지로 통합한다.
-- URL slug, `<title>`, H1, 본문, 썸네일, OG/구조화데이터, sitemap, 진행표 모두 숫자를 제거한 대표 통합 지역명을 사용한다.
+- **신규 발행 페이지는** URL slug, `<title>`, H1, 본문, 썸네일, OG/구조화데이터, sitemap, 진행표 모두 숫자를 제거한 대표 통합 지역명을 사용한다. 기존 발행 페이지는 아래 보존 규칙을 우선한다.
 - 신규 지역 선정 전에 기존 숫자 행정동 페이지와 통합 지역 페이지가 이미 있는지 함께 중복검사한다.
-- 이미 숫자 행정동 페이지가 발행되어 있다면 같은 대표 지역의 다른 숫자 동을 추가하지 않는다. 필요 시 기존 페이지를 대표 지역명으로 통합·수정한다.
+- 이미 숫자 행정동 페이지가 발행되어 있다면 기존 URL과 페이지는 원칙적으로 그대로 유지한다. 숫자를 제거하기 위한 강제 개명·URL 변경은 하지 않는다.
+- 기존 숫자 행정동 페이지가 있으면 같은 대표 지역의 다른 숫자 동이나 대표 통합명 신규 페이지를 추가하지 않는다. 즉, 기존 페이지를 대표 지역의 1개 페이지로 간주한다.
+- 기존 페이지 수정은 실제 중복 페이지가 생성된 경우처럼 정리가 필요한 때에만 진행하며, 이 경우에도 가능하면 기존 발행 URL을 보존하고 새로 생긴 중복본을 제거한다.
 - 인구순 진행표도 숫자 행정동을 개별 슬롯으로 반복 소비하지 않고 대표 지역 1개로 관리한다.
 | 다음 | 서울 관악구 신림동 | 완료 | `/moving/seoul-gwanak-sillim-moving/` |
-| 다음 | 서울 송파구 잠실동 | 완료 | `/internet/seoul-songpa-jamsil-internet-signup-benefits/` |
+| 다음 | 서울 송파구 잠실동 | 기존 페이지 유지 | `/internet/songpa-jamsil-internet-signup-benefits/` |
 | 다음 | 서울 송파구 잠실동 | 완료 | `/water/seoul-songpa-jamsil-water-purifier-rental/` |

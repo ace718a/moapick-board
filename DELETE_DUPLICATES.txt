@@ -1,0 +1,4 @@
+internet/seoul-songpa-jamsil-internet-signup-benefits/index.html
+assets/images/seoul-songpa-jamsil-internet-signup-benefits.png
+water/seoul-gangseo-hwagok-water-purifier-rental/index.html
+assets/images/seoul-gangseo-hwagok-water-purifier-rental.png
