@@ -205,4 +205,39 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://board.moapick.co.kr/moving/busan-yeonje-moving-cost-guide/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://board.moapick.co.kr/moving/seoul-dongjak-sangdo1-moving/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://board.moapick.co.kr/internet/gangseo-myeongji-internet-signup-benefits/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://board.moapick.co.kr/internet/sasang-jurye-internet-signup-benefits/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://board.moapick.co.kr/water/busan-bukgu-deokcheon-water-purifier-rental/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://board.moapick.co.kr/water/busan-namgu-daeyeon-water-purifier-rental/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://board.moapick.co.kr/rent/hyundai-santa-fe-long-term-rental/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
