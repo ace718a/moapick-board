@@ -556,3 +556,4 @@ CTA는 페이지 주제에 맞는 경로를 사용한다.
 | 다음 | 서울 마포구 성산동 | 46,870명 (2026-06) | 완료 | `/moving/seoul-mapo-seongsan-moving/` |
 | 다음 | 서울 동대문구 장안동 | 70,005명 (2026-06) | 완료 | `/internet/seoul-dongdaemun-jangan-internet-signup-benefits/` |
 | 다음 | 서울 동대문구 장안동 | 70,005명 (2026-06) | 완료 | `/water/seoul-dongdaemun-jangan-water-purifier-rental/` |
+| K5 장기렌트 가격 | 차종형 | 완료 | `/rent/kia-k5-long-term-rental/` |
