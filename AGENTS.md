@@ -581,6 +581,7 @@ CTA는 페이지 주제에 맞는 경로를 사용한다.
 | 그랜저 장기렌트 가격 | 차종형 | 완료 | `/rent/hyundai-grandeur-long-term-rental/` |
 | K5 장기렌트 가격 | 차종형 | 완료 | `/rent/kia-k5-long-term-rental/` |
 | 장기렌트 만기 인수 vs 반납 | 정보/비교형 | 완료 | `/rent/long-term-rental-buyout-vs-return/` |
+| 아반떼 장기렌트 가격 | 차종형 | 완료 | `/rent/hyundai-avante-long-term-rental/` |
 
 
 ## 페이지 이미지 경로와 실제 파일 일치 검수
