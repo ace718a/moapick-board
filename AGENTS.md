@@ -589,6 +589,7 @@ CTA는 페이지 주제에 맞는 경로를 사용한다.
 | 장기렌트 만기 인수 vs 반납 | 정보/비교형 | 완료 | `/rent/long-term-rental-buyout-vs-return/` |
 | 아반떼 장기렌트 가격 | 차종형 | 완료 | `/rent/hyundai-avante-long-term-rental/` |
 | 장기렌트 중도해지 vs 승계 | 정보/비교형 | 완료 | `/rent/long-term-rental-early-termination-vs-transfer/` |
+| 장기렌트 신용심사 준비 | 정보형 | 완료 | `/rent/long-term-rental-credit-review-guide/` |
 
 
 ## 페이지 이미지 경로와 실제 파일 일치 검수
