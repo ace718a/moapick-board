@@ -486,8 +486,9 @@ CTA는 페이지 주제에 맞는 경로를 사용한다.
 | 36 | 포장이사 | 서울 서대문구 연희동 | 33,004명 | 완료 (`/moving/seoul-seodaemun-yeonhui-moving/`) |
 | 37 | 인터넷가입 | 서울 중랑구 묵동(원자료: 묵제1동) | 32,873명 | 완료 (`/internet/seoul-jungnang-muk-internet-signup-benefits/`) |
 | 38 | 정수기렌탈 | 서울 중랑구 중화동(원자료: 중화제2동) | 25,570명 | 완료 (`/water/seoul-jungnang-junghwa-water-purifier-rental/`) |
+| 39 | 포장이사 | 서울 중랑구 면목동(원자료: 면목본동) | 후속 대기열 | 완료 (`/moving/seoul-jungnang-myeonmok-moving/`) |
 
-독산동부터 중화동까지 확정 배정을 순서대로 완료했다. 다음 포장이사·인터넷가입·정수기렌탈 지역은 후속 대기열 확장 시 배정한다.
+독산동부터 면목동까지 확정 배정을 순서대로 완료했다. 다음 포장이사·인터넷가입·정수기렌탈 지역은 후속 대기열 확장 시 배정한다.
 
 ### 2026년 7월 서울 행정동 인구 상위 대기열
 
