@@ -620,6 +620,7 @@ CTA는 페이지 주제에 맞는 경로를 사용한다.
 | K8 장기렌트 가격 | 차종형 | 완료 | `/rent/kia-k8-long-term-rental/` |
 | 장기렌트 주행거리 제한·초과요금 | 정보/비교형 | 완료 | `/rent/long-term-rental-mileage-limit-guide/` |
 | 장기렌트 정비 포함 vs 미포함 | 정보/비교형 | 완료 | `/rent/long-term-rental-maintenance-included-vs-excluded/` |
+| 팰리세이드 장기렌트 가격 | 차종형 | 완료 | `/rent/hyundai-palisade-long-term-rental/` |
 
 
 ## 페이지 이미지 경로와 실제 파일 일치 검수
