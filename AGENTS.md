@@ -488,8 +488,9 @@ CTA는 페이지 주제에 맞는 경로를 사용한다.
 | 38 | 정수기렌탈 | 서울 중랑구 중화동(원자료: 중화제2동) | 25,570명 | 완료 (`/water/seoul-jungnang-junghwa-water-purifier-rental/`) |
 | 39 | 포장이사 | 서울 중랑구 면목동(원자료: 면목본동) | 후속 대기열 | 완료 (`/moving/seoul-jungnang-myeonmok-moving/`) |
 | 40 | 인터넷가입 | 서울 은평구 응암동 | 후속 대기열 | 완료 (`/internet/seoul-eunpyeong-eungam-internet-signup-benefits/`) |
+| 41 | 정수기렌탈 | 서울 송파구 문정동 | 후속 대기열 | 완료 (`/water/seoul-songpa-munjeong-water-purifier-rental/`) |
 
-독산동부터 응암동까지 확정 배정을 순서대로 완료했다. 다음 포장이사·인터넷가입·정수기렌탈 지역은 후속 대기열 확장 시 배정한다.
+독산동부터 문정동까지 확정 배정을 순서대로 완료했다. 다음 포장이사·인터넷가입·정수기렌탈 지역은 후속 대기열 확장 시 배정한다.
 
 ### 2026년 7월 서울 행정동 인구 상위 대기열
 
