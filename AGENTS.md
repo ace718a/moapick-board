@@ -640,6 +640,7 @@ CTA는 페이지 주제에 맞는 경로를 사용한다.
 | 팰리세이드 장기렌트 가격 | 차종형 | 완료 | `/rent/hyundai-palisade-long-term-rental/` |
 | 장기렌트 보험 조건·운전자 범위·사고부담금 | 정보/비교형 | 완료 | `/rent/long-term-rental-insurance-coverage-guide/` |
 | 쏘나타 장기렌트 가격 | 차종형 | 완료 | `/rent/hyundai-sonata-long-term-rental/` |
+| 장기렌트 즉시출고 vs 일반출고 | 정보/비교형 | 완료 | `/rent/long-term-rental-immediate-delivery-vs-factory-order/` |
 
 
 ## 페이지 이미지 경로와 실제 파일 일치 검수
