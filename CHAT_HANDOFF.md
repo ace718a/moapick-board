@@ -35,9 +35,9 @@
 
 2026-10-01 누적본 기준:
 
-- 전체 게시글: **122개**
+- 전체 게시글: **123개**
 - 메인 목록: **13페이지**
-- 포장이사: **34개 / 4페이지**
+- 포장이사: **35개 / 4페이지**
 - 장기렌트: **24개 / 3페이지**
 - 인터넷가입: **34개 / 4페이지**
 - 정수기렌탈: **30개 / 3페이지**
@@ -47,7 +47,7 @@
 | 업종 | 주제·지역 | URL |
 |---|---|---|
 | 장기렌트 | 장기렌트 vs 자동차리스 차이 | `/rent/long-term-rental-vs-auto-lease/` |
-| 포장이사 | 서울 양천구 목동 | `/moving/seoul-yangcheon-mokdong-moving/` |
+| 포장이사 | 서울 동작구 상도동 | `/moving/seoul-dongjak-sangdo-moving/` |
 | 인터넷가입 | 서울 노원구 공릉동 | `/internet/seoul-nowon-gongneung-internet-signup-benefits/` |
 | 정수기렌탈 | 서울 강서구 우장산동 | `/water/seoul-gangseo-ujangsan-water-purifier-rental/` |
 
