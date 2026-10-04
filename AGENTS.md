@@ -666,6 +666,7 @@ CTA는 페이지 주제에 맞는 경로를 사용한다.
 | 장기렌트 계약기간 36·48·60개월 비교 | 정보/비교형 | 완료 | `/rent/long-term-rental-contract-period-guide/` |
 | 가솔린 vs 하이브리드 장기렌트 | 정보/비교형 | 완료 | `/rent/gasoline-vs-hybrid-long-term-rental/` |
 | 장기렌트 vs 자동차리스 차이 | 정보/비교형 | 완료 | `/rent/long-term-rental-vs-auto-lease/` |
+| 제네시스 G80 장기렌트 가격 | 차종형 | 완료 | `/rent/genesis-g80-long-term-rental/` |
 
 
 ## 페이지 이미지 경로와 실제 파일 일치 검수
