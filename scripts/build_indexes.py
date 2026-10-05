@@ -7,6 +7,7 @@ import shutil
 
 ROOT = Path(__file__).resolve().parents[1]
 PER_PAGE = 10
+PAGINATION_BLOCK = 10
 
 CATEGORIES = {
     "moving": {
@@ -115,18 +116,46 @@ def stable_sort(items, known_order):
 def pagination_html(current, total, base_url):
     if total <= 1:
         return ""
+
+    # Up to 10 pages, keep the familiar previous/next page arrows.
+    if total <= PAGINATION_BLOCK:
+        parts = ['<nav class="pagination" aria-label="페이지 이동">']
+        if current > 1:
+            href = base_url if current == 2 else f"{base_url}page/{current-1}/"
+            parts.append(f'<a class="page-arrow" href="{href}" aria-label="이전 페이지">‹</a>')
+        for n in range(1, total + 1):
+            href = base_url if n == 1 else f"{base_url}page/{n}/"
+            if n == current:
+                parts.append(f'<span class="page-number is-current" aria-current="page">{n}</span>')
+            else:
+                parts.append(f'<a class="page-number" href="{href}">{n}</a>')
+        if current < total:
+            parts.append(f'<a class="page-arrow" href="{base_url}page/{current+1}/" aria-label="다음 페이지">›</a>')
+        parts.append("</nav>")
+        return "".join(parts)
+
+    # Longer boards show page numbers in blocks of 10.
+    # Example: 1~10 >, then < 11~20 >.
+    block_start = ((current - 1) // PAGINATION_BLOCK) * PAGINATION_BLOCK + 1
+    block_end = min(block_start + PAGINATION_BLOCK - 1, total)
+
     parts = ['<nav class="pagination" aria-label="페이지 이동">']
-    if current > 1:
-        href = base_url if current == 2 else f"{base_url}page/{current-1}/"
-        parts.append(f'<a class="page-arrow" href="{href}" aria-label="이전 페이지">‹</a>')
-    for n in range(1, total + 1):
+    if block_start > 1:
+        prev_block_page = block_start - 1
+        href = base_url if prev_block_page == 1 else f"{base_url}page/{prev_block_page}/"
+        parts.append(f'<a class="page-arrow" href="{href}" aria-label="이전 페이지 묶음">‹</a>')
+
+    for n in range(block_start, block_end + 1):
         href = base_url if n == 1 else f"{base_url}page/{n}/"
         if n == current:
             parts.append(f'<span class="page-number is-current" aria-current="page">{n}</span>')
         else:
             parts.append(f'<a class="page-number" href="{href}">{n}</a>')
-    if current < total:
-        parts.append(f'<a class="page-arrow" href="{base_url}page/{current+1}/" aria-label="다음 페이지">›</a>')
+
+    if block_end < total:
+        next_block_page = block_end + 1
+        parts.append(f'<a class="page-arrow" href="{base_url}page/{next_block_page}/" aria-label="다음 페이지 묶음">›</a>')
+
     parts.append("</nav>")
     return "".join(parts)
 
