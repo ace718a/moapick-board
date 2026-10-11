@@ -713,3 +713,15 @@ CTA는 페이지 주제에 맞는 경로를 사용한다.
 - 제목 표현만 다르고 실질적으로 같은 주제(예: 방문관리/자가관리 연속 반복, 이전설치 연속 반복)를 두 섹션에서 재설명하지 않는다.
 - 공통 계약 안내가 이미 한 섹션에 있으면 다른 섹션은 해당 지역의 설치공간·주거형태·사용패턴 등 별도 검색 의도로 작성한다.
 - 자동 QA PASS만으로 완료 처리하지 않고, 01~08 소제목을 한 번에 펼쳐 사람이 읽었을 때 역할이 겹치지 않는지 확인한다.
+
+
+## 썸네일 텍스트 고정 표준 (2026-10-11)
+
+썸네일 제작 시 프로젝트 루트의 `THUMBNAIL_STANDARD.md`를 반드시 먼저 읽는다.
+배경이미지는 자유롭게 바꿔도 되지만, 텍스트 레이아웃은 카테고리별 승인 기준본과 동일하게 유지한다.
+특히 제품·차량·정수기 사진을 살리기 위해 중앙 핵심어를 줄이지 않는다. 배경 오브젝트가 텍스트에 일부 가려져도 허용하며, 목록 축소 상태에서의 텍스트 가독성을 최우선으로 한다.
+2026-10-11 승인 기준본은 다음과 같다.
+- 장기렌트: `assets/images/genesis-gv80-hybrid-long-term-rental.png`
+- 포장이사: `assets/images/seoul-songpa-ogum-moving.png`
+- 인터넷가입: `assets/images/seoul-seongbuk-jongam-internet-signup-benefits.png`
+- 정수기렌탈: `assets/images/seoul-gangnam-daechi-water-purifier-rental.png`
