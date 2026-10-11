@@ -36,23 +36,23 @@
 
 ## 3. 최신 누적 상태
 
-2026-10-06 누적본 기준:
+2026-10-11 누적본 기준:
 
-- 전체 게시글: **135개**
+- 전체 게시글: **139개**
 - 메인 목록: **14페이지**
-- 포장이사: **38개 / 4페이지**
-- 장기렌트: **25개 / 3페이지**
-- 인터넷가입: **38개 / 4페이지**
-- 정수기렌탈: **34개 / 4페이지**
+- 포장이사: **39개 / 4페이지**
+- 장기렌트: **26개 / 3페이지**
+- 인터넷가입: **39개 / 4페이지**
+- 정수기렌탈: **35개 / 4페이지**
 
 가장 최근 완료한 4개:
 
 | 업종 | 주제·지역 | URL |
 |---|---|---|
-| 정수기렌탈 | 서울 강남구 개포동 | `/water/seoul-gangnam-gaepo-water-purifier-rental/` |
-| 인터넷가입 | 서울 강동구 상일동 | `/internet/seoul-gangdong-sangil-internet-signup-benefits/` |
-| 포장이사 | 서울 중랑구 망우동 | `/moving/seoul-jungnang-mangu-moving/` |
-| 정수기렌탈 | 서울 서초구 양재동 | `/water/seoul-seocho-yangjae-water-purifier-rental/` |
+| 정수기렌탈 | 서울 강남구 대치동 | `/water/seoul-gangnam-daechi-water-purifier-rental/` |
+| 인터넷가입 | 서울 성북구 종암동 | `/internet/seoul-seongbuk-jongam-internet-signup-benefits/` |
+| 포장이사 | 서울 송파구 오금동 | `/moving/seoul-songpa-ogum-moving/` |
+| 장기렌트 | 제네시스 GV80 하이브리드 | `/rent/genesis-gv80-hybrid-long-term-rental/` |
 
 지역형 다음 배정은 `AGENTS.md`의 **2026년 7월 서울 행정동 인구 상위 대기열**과 실제 업종별 디렉터리를 다시 대조해 결정한다. 과거 기억만으로 지역을 정하지 않는다. 같은 회차의 포장이사·인터넷·정수기 지역은 서로 겹치지 않게 배정한다.
 
