@@ -727,3 +727,17 @@ CTA는 페이지 주제에 맞는 경로를 사용한다.
 - 제목 표현만 다르고 실질적으로 같은 주제(예: 방문관리/자가관리 연속 반복, 이전설치 연속 반복)를 두 섹션에서 재설명하지 않는다.
 - 공통 계약 안내가 이미 한 섹션에 있으면 다른 섹션은 해당 지역의 설치공간·주거형태·사용패턴 등 별도 검색 의도로 작성한다.
 - 자동 QA PASS만으로 완료 처리하지 않고, 01~08 소제목을 한 번에 펼쳐 사람이 읽었을 때 역할이 겹치지 않는지 확인한다.
+
+
+### 2026-10-23 신규 8페이지 발행
+
+| 업종 | 주제 | URL |
+|---|---|---|
+| 장기렌트 | 현대 코나 장기렌트 초기비용·트림·계약조건 비교 | `/rent/hyundai-kona-long-term-rental/` |
+| 장기렌트 | 장기렌트 출고 전 체크리스트 차량상태·서류·인수 확인 | `/rent/long-term-rental-delivery-checklist/` |
+| 포장이사 | 서울 강동구 천호동 포장이사 비용·비교견적·현장조건 체크 | `/moving/seoul-gangdong-cheonho-moving/` |
+| 포장이사 | 서울 마포구 공덕동 포장이사 비용·비교견적·현장조건 체크 | `/moving/seoul-mapo-gongdeok-moving/` |
+| 인터넷가입 | 서울 영등포구 당산동 인터넷가입 요금·결합·설치조건 비교 | `/internet/seoul-yeongdeungpo-dangsan-internet-signup-benefits/` |
+| 인터넷가입 | 서울 마포구 공덕동 인터넷가입 요금·결합·설치조건 비교 | `/internet/seoul-mapo-gongdeok-internet-signup-benefits/` |
+| 정수기렌탈 | 서울 중랑구 신내동 정수기렌탈 가격·관리·설치조건 비교 | `/water/seoul-jungnang-sinnae-water-purifier-rental/` |
+| 정수기렌탈 | 서울 관악구 청룡동 정수기렌탈 가격·관리·설치조건 비교 | `/water/seoul-gwanak-cheongnyong-water-purifier-rental/` |
