@@ -63,6 +63,17 @@
 - 단, 같은 문단을 복사해 붙이는 방식은 금지한다. 핵심 메시지는 반복 가능하지만 각 페이지의 문장·사례·구성은 새로 작성해 검색 품질과 가독성을 유지한다.
 - 과장·허위·무조건 최저가 보장 같은 단정은 금지한다. **"비교하면 더 유리한 조건을 찾을 가능성이 높다"**, **"조건 차이가 커서 상담 비교가 필요하다"**처럼 검증 가능한 범위에서 설득한다.
 
+
+### 신규 페이지 분량·FAQ·보조 이미지 기준 (2026-11-04 이후)
+
+- 2026-11-04 이후 새로 발행하는 페이지의 사용자에게 보이는 본문 텍스트는 공백 제외 2,500~3,000자를 목표로 한다. 내비게이션·푸터·스크립트·iframe 코드·메타 태그는 분량에서 제외한다.
+- 상단 설명을 억지로 늘리지 않는다. 핵심 본문은 기존 구조를 유지하고 FAQ를 8개로 구성해 계약 조건·비용·설치·관리·비교 과정의 실제 질문을 보강한다.
+- FAQ 답변은 페이지의 지역·차종·주거 형태·설치 환경에 맞는 고유 문장으로 작성하며, 다른 페이지 답변을 지역명만 바꿔 복사하지 않는다.
+- 기존 발행 페이지는 사용자가 별도 수정을 요청하지 않는 한 이 분량 기준을 소급 적용하지 않는다.
+- 본문 보조 이미지는 `assets/images/support/{rent|moving|internet|water}/`의 업종별 공용 이미지 25장 중 1~2장을 선택해 재사용할 수 있다.
+- 보조 이미지는 해당 업종만 맞으면 일반적이거나 유사한 장면이어도 허용하며 각 문단과 억지로 1:1 대응시킬 필요가 없다. 다른 업종 이미지 혼입, 읽을 수 있는 문구·로고·브랜드, 심한 형태 왜곡은 금지한다.
+- 같은 페이지 안에서는 동일 파일을 반복하지 않고, `alt`는 이미지 장면을 자연스럽게 설명하며 `loading="lazy"`를 사용한다.
+- 위 보조 이미지는 정사각형 썸네일 제작용 공용 배경과 별도이다. `THUMBNAIL_STANDARD.md`의 썸네일 공용 배경 규칙은 그대로 유지한다.
 ------------------------------------------------------------------------
 
 ## 3. 본문 재사용 금지
@@ -250,37 +261,65 @@ HTML: `/assets/images/saha-hadan-internet-signup-benefits.png`
 
 ## 8. 카테고리별 CTA 검수
 
-CTA는 페이지 주제에 맞는 경로를 사용한다.
+2026-11-04 이전에 발행·납품한 기존 페이지와 ZIP은 소급 수정하지 않는다.
+2026-11-04 이후 새로 작성하거나 사용자가 별도로 수정을 요청한 페이지는 아래
+**신규 고정값**을 사용한다. 기존 페이지의 CTA나 iframe을 복사해 새 페이지에
+재사용하지 않는다.
 
-현재 기본 내부 경로:
+### 신규 페이지 버튼형 CTA 고정 URL
 
--   포장이사 → `/24/`
--   장기렌트 → `/rent`
--   정수기렌탈 → `/water/`
--   인터넷가입 → `/internet`
+- 장기렌트 → `https://replyalba.com/pt/OFrqeIk6Cx`
+- 포장이사 → `https://modu24.kr/?num=15421040`
+- 인터넷가입 → `https://kinternet.kr/?num=15421040`
+- 정수기렌탈 → `https://replyalba.com/pt/MPhJVqrLHl`
 
-외부 상담 iframe/제휴 링크는 **카테고리별 허용 코드를 고정값으로 검사**한다.
-'기존 페이지에서 복사했으니 정상'이라고 추정하지 않는다.
+### 신규 페이지 iframe 고정값
 
-현재 허용 iframe:
+- 장기렌트 → `https://replyalba.com/intros/_frm/index.php?code=OFrqeIk6Cx`
+  - iframe `name="ifrm_icode"`, `id="ifrCCAl"`
+  - 스크립트: `https://replyalba.com/js/jquery-1.11.0.min.js`, `https://replyalba.com/js/iframeResizer.min.js`
+  - `#ifrCCAl`에 사용자가 제공한 전체 `iFrameResize` 옵션을 그대로 적용한다.
+- 포장이사 → `https://modu24.kr/frm.php?p_id=d301p`
+  - iframe `name="co10Frm"`, `id="co10Frm"`
+  - 스크립트: `https://co10.kr/gate/js/jquery.min.js`, `https://co10.kr/gate/js/iframeResizer.min.js`
+  - `#co10Frm`에 `iFrameResize({autoResize: true})`를 적용한다.
+- 인터넷가입 → `https://kinternet.kr/frm.php?p_id=d301p`
+  - iframe `name="co10Frm"`, `id="co10Frm"`
+  - 스크립트: `https://co10.kr/gate/js/jquery.min.js`, `https://co10.kr/gate/js/iframeResizer.min.js`
+  - `#co10Frm`에 `iFrameResize({autoResize: true})`를 적용한다.
+- 정수기렌탈 → `https://replyalba.com/intros/_frm/index.php?code=MPhJVqrLHl`
+  - iframe `name="ifrm_icode"`, `id="ifrCCAl"`
+  - 스크립트: `https://replyalba.com/js/jquery-1.11.0.min.js`, `https://replyalba.com/js/iframeResizer.min.js`
+  - `#ifrCCAl`에 사용자가 제공한 전체 `iFrameResize` 옵션을 그대로 적용한다.
 
-- 포장이사 지역페이지 → `https://replyalba.com/intros/_frm/index.php?code=WrHxEC3ope` (사용자 직접 제공 상담창 iframe 기준)
-- 포장이사 정보페이지 `moving-estimate-checklist` → `https://modu24.kr/frm.php?p_id=zobonpal15`
-- 장기렌트 → `https://replyalba.com/intros/_frm/index.php?code=HkNocHicEW`
-- 정수기렌탈 → `https://replyalba.com/intros/_frm/index.php?code=DnrdQaVJyl`
-- 인터넷가입 → `https://kinternet.kr/frm.php?p_id=zobonpal15`
+### 신규 iframe 삽입 코드
 
-신규/수정 페이지는 배포 전에 iframe `src`를 추출해 위 허용값과 정확히 대조한다.
-다른 업종의 iframe 코드가 하나라도 들어가면 QA FAIL로 처리한다.
+장기렌트:
 
+```html
+<iframe name="ifrm_icode" id="ifrCCAl" scrolling="no" frameborder="0" width="100%" src="https://replyalba.com/intros/_frm/index.php?code=OFrqeIk6Cx"></iframe><script type="text/javascript" src="https://replyalba.com/js/jquery-1.11.0.min.js"></script><script type="text/javascript" src="https://replyalba.com/js/iframeResizer.min.js"></script><script type="text/javascript">$("#ifrCCAl").iFrameResize({autoResize: true,bodyBackground: null,bodyMargin: null,bodyMarginV1: 0,bodyPadding: null,checkOrigin: true,enablePublicMethods: false,heightCalculationMethod: "offset",interval: 32,log: false,maxHeight: Infinity,maxWidth: Infinity,minHeight: 0,minWidth: 0,scrolling: false,sizeHeight: true,sizeWidth: false,tolerance: 0,closedCallback: function () { },initCallback: function () { },messageCallback: function () { },resizedCallback: function () { },callback: function (messageData) {return true;}});</script>
+```
 
+포장이사:
 
-### 포장이사 지역페이지 상담창 iframe 고정 규칙
-- 포장이사 지역페이지의 정확한 상담창 iframe `src`는 `https://replyalba.com/intros/_frm/index.php?code=WrHxEC3ope` 이다.
-- 함께 사용하는 스크립트는 `https://replyalba.com/js/jquery-1.11.0.min.js` 와 `https://replyalba.com/js/iframeResizer.min.js` 이다.
-- iframe `name`은 `ifrm_icode`, `id`는 `ifrCCAl`을 유지하고 `#ifrCCAl`에 `iFrameResize`를 적용한다.
-- 이전에 잘못 사용한 포장이사 상담 코드는 재사용하지 않는다. 현재 고정값은 위 `WrHxEC3ope`만 허용한다.
-- 포장이사 정보페이지 `moving-estimate-checklist`의 `modu24.kr` 상담폼은 별도 기준이며 교체하지 않는다.
+```html
+<iframe name="co10Frm" id="co10Frm" scrolling="no" frameborder="0" width="100%" src="https://modu24.kr/frm.php?p_id=d301p"></iframe><script type="text/javascript" src="https://co10.kr/gate/js/jquery.min.js"></script><script type="text/javascript" src="https://co10.kr/gate/js/iframeResizer.min.js"></script><script type="text/javascript">$("#co10Frm").iFrameResize({autoResize: true});</script>
+```
+
+인터넷가입:
+
+```html
+<iframe name="co10Frm" id="co10Frm" scrolling="no" frameborder="0" width="100%" src="https://kinternet.kr/frm.php?p_id=d301p"></iframe><script type="text/javascript" src="https://co10.kr/gate/js/jquery.min.js"></script><script type="text/javascript" src="https://co10.kr/gate/js/iframeResizer.min.js"></script><script type="text/javascript">$("#co10Frm").iFrameResize({autoResize: true});</script>
+```
+
+정수기렌탈:
+
+```html
+<iframe name="ifrm_icode" id="ifrCCAl" scrolling="no" frameborder="0" width="100%" src="https://replyalba.com/intros/_frm/index.php?code=MPhJVqrLHl"></iframe><script type="text/javascript" src="https://replyalba.com/js/jquery-1.11.0.min.js"></script><script type="text/javascript" src="https://replyalba.com/js/iframeResizer.min.js"></script><script type="text/javascript">$("#ifrCCAl").iFrameResize({autoResize: true,bodyBackground: null,bodyMargin: null,bodyMarginV1: 0,bodyPadding: null,checkOrigin: true,enablePublicMethods: false,heightCalculationMethod: "offset",interval: 32,log: false,maxHeight: Infinity,maxWidth: Infinity,minHeight: 0,minWidth: 0,scrolling: false,sizeHeight: true,sizeWidth: false,tolerance: 0,closedCallback: function () { },initCallback: function () { },messageCallback: function () { },resizedCallback: function () { },callback: function (messageData) {return true;}});</script>
+```
+신규/수정 페이지는 배포 전에 버튼 `href`, iframe `src`, iframe `name`·`id`,
+스크립트 URL을 위 고정값과 정확히 대조한다. 예전 코드나 다른 업종 코드가
+하나라도 들어가면 QA FAIL로 처리한다.
 
 ### 금지
 
