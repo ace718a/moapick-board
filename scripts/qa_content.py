@@ -8,23 +8,31 @@ from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
 CONTENT_AREAS = ("moving", "rent", "internet", "water")
+CUTOFF = "2026-11-04"
 CTA_CLASS = re.compile(r"(?:^|\s)(?:bottom-cta|mid-cta)(?:\s|$)")
 RELATED_CLASS = re.compile(r"(?:^|\s)[\w-]*related[\w-]*(?:\s|$)")
 BAD_HREFS = {"", "#", "javascript:void(0)", "javascript:void(0);"}
-EXPECTED_LANDINGS = {
+LEGACY_LANDINGS = {
     "moving": ("moapick.co.kr", "/24"),
     "rent": ("moapick.co.kr", "/rent"),
     "internet": ("moapick.co.kr", "/internet"),
     "water": ("moapick.co.kr", "/water"),
+}
+NEW_LANDINGS = {
+    "moving": "https://modu24.kr/?num=15421040",
+    "rent": "https://replyalba.com/pt/OFrqeIk6Cx",
+    "internet": "https://kinternet.kr/?num=15421040",
+    "water": "https://replyalba.com/pt/MPhJVqrLHl",
 }
 
 
 class ContentAudit(HTMLParser):
     void_elements = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "param", "source", "track", "wbr"}
 
-    def __init__(self, area: str) -> None:
+    def __init__(self, area: str, new_page: bool) -> None:
         super().__init__(convert_charrefs=True)
         self.area = area
+        self.new_page = new_page
         self.stack: list[str] = []
         self.ctas: list[dict[str, object]] = []
         self.related: list[dict[str, int]] = []
@@ -70,10 +78,14 @@ class ContentAudit(HTMLParser):
                 if normalized in BAD_HREFS or normalized.startswith("javascript:"):
                     self.errors.append(f"CTA has invalid href: {href!r}")
                     continue
-                parsed = urlparse(href)
-                host, path = EXPECTED_LANDINGS[self.area]
-                if parsed.scheme not in {"http", "https"} or parsed.netloc != host or not parsed.path.rstrip("/").startswith(path):
-                    self.errors.append(f"CTA points outside expected landing: {href}")
+                if self.new_page:
+                    if href != NEW_LANDINGS[self.area]:
+                        self.errors.append(f"new CTA points outside expected landing: {href}")
+                else:
+                    parsed = urlparse(href)
+                    host, path = LEGACY_LANDINGS[self.area]
+                    if parsed.scheme not in {"http", "https"} or parsed.netloc != host or not parsed.path.rstrip("/").startswith(path):
+                        self.errors.append(f"legacy CTA points outside expected landing: {href}")
         if self.related and self.related[-1]["depth"] == depth:
             related = self.related.pop()
             if related["links"] == 0:
@@ -88,20 +100,25 @@ class ContentAudit(HTMLParser):
 def main() -> int:
     failures: list[str] = []
     checked = 0
+    new_checked = 0
     for area in CONTENT_AREAS:
         for path in (ROOT / area).rglob("*.html"):
             if path.parent == ROOT / area:
                 continue
             checked += 1
-            parser = ContentAudit(area)
-            parser.feed(path.read_text(encoding="utf-8"))
+            text = path.read_text(encoding="utf-8")
+            published_match = re.search(r'"datePublished"\s*:\s*"([^"]+)"', text)
+            new_page = bool(published_match and published_match.group(1) >= CUTOFF)
+            new_checked += int(new_page)
+            parser = ContentAudit(area, new_page)
+            parser.feed(text)
             parser.close()
             failures.extend(f"{path.relative_to(ROOT)}: {error}" for error in parser.errors)
     if failures:
         print("CONTENT QA FAILED")
         print("\n".join(f"- {failure}" for failure in failures))
         return 1
-    print(f"CONTENT QA PASS ({checked} article pages)")
+    print(f"CONTENT QA PASS ({checked} article pages / new {new_checked})")
     return 0
 
 
