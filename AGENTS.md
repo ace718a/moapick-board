@@ -841,3 +841,20 @@ HTML: `/assets/images/saha-hadan-internet-signup-benefits.png`
 | 포장이사 | 서울 영등포구 여의도동 포장이사 아파트·오피스·승강기·주차 비교 | /moving/seoul-yeongdeungpo-yeouido-moving/ |
 | 인터넷가입 | 서울 강동구 강일동 인터넷가입 아파트망·결합·와이파이·설치 비교 | /internet/seoul-gangdong-gangil-internet-signup-benefits/ |
 | 정수기렌탈 | 서울 은평구 녹번동 정수기렌탈 설치공간·수압·관리·가격 비교 | /water/seoul-eunpyeong-nokbeon-water-purifier-rental/ |
+
+
+### 2026-11-06 강화형 추가 4페이지 발행
+
+| 업종 | 주제 | URL |
+|---|---|---|
+| 장기렌트 | 장기렌트 운전자 범위·연령·가족·직원·보험 조건 비교 | `/rent/long-term-rental-driver-age-coverage-guide/` |
+| 포장이사 | 서울 동대문구 장안동 포장이사 주차·승강기·골목 동선 비교 | `/moving/seoul-dongdaemun-jangan-moving/` |
+| 인터넷가입 | 서울 서대문구 홍제동 인터넷가입 주소조회·결합·와이파이 비교 | `/internet/seoul-seodaemun-hongje-internet-signup-benefits/` |
+| 정수기렌탈 | 서울 마포구 성산동 정수기렌탈 공간·기능·관리·가격 비교 | `/water/seoul-mapo-seongsan-water-purifier-rental/` |
+
+## OG 대표 이미지 규격 태그 필수 규칙
+
+- 신규 페이지의 `og:image`에는 절대 HTTPS URL을 사용한다.
+- 바로 뒤에 실제 대표 이미지와 일치하는 `og:image:width`, `og:image:height`, `og:image:type`을 함께 넣는다.
+- 현재 1024×1024 PNG 썸네일은 각각 `1024`, `1024`, `image/png`로 기록한다. 실제 파일과 다른 `1000` 또는 `image/jpeg` 값을 넣지 않는다.
+- 본문 대표 이미지, Article 구조화데이터의 image, og:image는 동일한 파일을 가리켜야 한다.
